@@ -1,0 +1,33 @@
+{
+  "name": "webp-prefer-loader",
+  "version": "0.0.1",
+  "description": "webp渐进式使用的loader",
+  "files": [
+    "src/*",
+    "README.md"
+  ],
+  "main": "src/index.js",
+  "homepage": "https://github.com/huhm/webp-prefer-loader",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "huhuimei2008@gmail.com",
+  "license": "ISC",
+  "peerDependencies": {
+    "webpack": "^4.0.0"
+  },
+  "devDependencies": {
+    "@webpack-contrib/eslint-config-webpack": "^3.0.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "prettier": "^2.3.2",
+    "webpack": "^4.0.0"
+  },
+  "dependencies": {
+    "loader-utils": "^2.0.0",
+    "webp-converter": "^2.3.3"
+  }
+}
