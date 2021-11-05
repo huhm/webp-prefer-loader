@@ -2,6 +2,8 @@
 
 TODO: 文档待更新
 
+![npm package](https://img.shields.io/npm/v/webp-prefer-loader)
+
 ## 功能
 
 + webpack loader
