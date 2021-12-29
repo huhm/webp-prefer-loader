@@ -109,6 +109,7 @@ function WebPPreferLoader(content) {
     if (webpSrcPath || webpOutputPath) {
       let webpContentPromise
       if (webpSrcPath && fs.existsSync(webpSrcPath)) {
+        // webpsrc exists to read
         webpContentPromise = new Promise((resolve, reject) => {
           fs.readFile(webpSrcPath, (err, webpContent) => {
             if (err) {
@@ -154,7 +155,9 @@ function WebPPreferLoader(content) {
       }
       waitPromise = webpContentPromise.then(webpContent => {
         // 3.emit
-        this.emitFile(webpOutputPath, webpContent, null, { immutable })
+        if(webpOutputPath){
+          this.emitFile(webpOutputPath, webpContent, null, { immutable })
+        }
       })
     }
   }

@@ -43,9 +43,9 @@ webpack配置（可结合url-loader使用,也可单独使用）
                       return {
                         // 是否emit原始png文件
                         dontEmitOrigin:true,
-                        // 原始png文件同目录下是否创建webp文件
+                        // 原始png文件同目录下是否创建webp文件，为空时，不处理
                         webpSrcPath: resourcePath + '.webp',
-                        // 是否打包出来
+                        // 是否打包出来，如果为空的话，不会打包，不为空时，需要保证webpSrcPath有值
                         webpOutputPath,
                       }
                    }
