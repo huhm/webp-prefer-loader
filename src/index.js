@@ -2,7 +2,7 @@ const path = require('path')
 const querystring = require('querystring')
 const fs = require('fs')
 
-const loaderUtils = require('loader-utils')
+const {getOptions,interpolateName} = require('loader-utils')
 
 // const imagemin = require('imagemin')
 // const imageminWebp = require('imagemin-webp')
@@ -35,11 +35,11 @@ function defaultBeforeConvert({
  * @param beforeConvert {(info:{resourcePath:string,resourceQueryObj:Record<string,string>,outPutPath:string})=>{dontEmitOrigin:boolean,webpSrcPath:string,webpOutputPath:string}}
  */
 function WebPPreferLoader(content) {
-  const options = loaderUtils.getOptions(this)
+  const options = getOptions(this) ||{}
   const context = options.context || this.rootContext
   const name = options.name || '[hash].[ext]'
   const immutable = /\[([^:\]]+:)?(hash|contenthash)(:[^\]]+)?\]/gi.test(name)
-  const url = loaderUtils.interpolateName(this, name, {
+  const url = interpolateName(this, name, {
     context,
     content,
     regExp: options.regExp,
