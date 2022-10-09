@@ -1,6 +1,6 @@
 {
   "name": "webp-prefer-loader",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "webp渐进式使用的loader",
   "files": [
     "src/*",
