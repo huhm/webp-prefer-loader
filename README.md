@@ -33,6 +33,9 @@ webpack配置（可结合url-loader使用,也可单独使用）
               fallback: {
                 loader: require('webp-prefer-loader'),
                 options: {
+                  // cwebp转换参数 doc:https://developers.google.com/speed/webp/docs/cwebp
+
+                  convertOption:'-q 90',// 默认-q 90
                   name: 'static/img/[name].[hash:8].[ext]',
                   beforeConvert: function () {
                       if (resourceQueryObj.webp == null) {
